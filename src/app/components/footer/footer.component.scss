@@ -1,0 +1,22 @@
+.footer {
+    background-color: rgb(68, 68, 117);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .8rem 1rem;
+    color: whitesmoke;
+
+    .footer-links {
+        display: flex;
+
+        li {
+            list-style: none;
+            margin: 0 10px;
+        }
+    }
+
+}
