@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UsersService } from 'src/app/users.service';
 
 @Component({
   selector: 'app-login-form',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./login-form.component.scss']
 })
 export class LoginFormComponent {
+  constructor(private users: UsersService ){
+
+  }
 
 }

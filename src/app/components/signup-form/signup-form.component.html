@@ -1,9 +1,9 @@
 <div class="signup-form">   
-    <form class="form-group">
+    <form class="form-group" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
         <h2 class="">sign up</h2>
-        <input type="text"  placeholder="Enter your full name..." class="form-control mt-2" >
-        <input type="text"  placeholder="Enter your email..." class="form-control my-2" >
-        <input type="password" placeholder="Enter password" class="form-control">
+        <input type="text" formControlName="fullname"  placeholder="Enter your full name..." class="form-control mt-2" >
+        <input type="text" formControlName="email" placeholder="Enter your email..." class="form-control my-2" >
+        <input type="password" formControlName="password" placeholder="Enter password" class="form-control">
         <button class="btn btn-success my-3">sign up</button>
         <div class="form-links">
             <small routerLink="/signup">Don't have an acc ? sign up</small>

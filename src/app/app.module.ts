@@ -11,6 +11,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginFormComponent } from './components/login-form/login-form.component';
 import { SignupFormComponent } from './components/signup-form/signup-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -26,7 +28,8 @@ import { SignupFormComponent } from './components/signup-form/signup-form.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
