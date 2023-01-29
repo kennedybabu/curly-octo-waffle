@@ -14,7 +14,6 @@ export class SignupFormComponent {
   }
 
   ngOnInit(): void {
-    this.users.saveUser('id', 'jsklksn')
 }
 
   signupForm = this.formBuilder.group({
@@ -28,7 +27,7 @@ export class SignupFormComponent {
 
   onSubmit(){
     const user = this.signupForm.value
-    this.users.saveUser('user', JSON.stringify(user))
+    this.users.saveUser(JSON.stringify(user))    
   }
 
 }
