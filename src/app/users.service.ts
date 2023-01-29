@@ -16,11 +16,20 @@ export class UsersService {
       this.arr = JSON.parse(storedArr)
       this.arr.push(JSON.parse(value))
       localStorage.setItem('users', JSON.stringify(this.arr))   
-    }
+    }   
     
   }
+  
 
   public getUsers(key: string){   
     return localStorage.getItem(key)
   }
+
+
+  public loginUser(){
+    let people = this.getUsers('users')
+    console.log('ppple',people)
+  }
+
+
 }

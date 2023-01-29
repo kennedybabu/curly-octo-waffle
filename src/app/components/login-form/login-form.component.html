@@ -1,8 +1,8 @@
 <div class="login-form">   
-    <form class="form-group">
+    <form class="form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
         <h2 class="">login</h2>
-        <input type="text"  placeholder="Enter email" class="form-control my-2" >
-        <input type="password" placeholder="Enter password" class="form-control">
+        <input type="text" formControlName="email" placeholder="Enter email" class="form-control my-2" >
+        <input type="password" formControlName="password" placeholder="Enter password" class="form-control">
         <button class="btn btn-success my-3">login</button>
         <div class="form-links">
             <small>Forgot password ?</small>
