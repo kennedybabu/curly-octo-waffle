@@ -1,0 +1,46 @@
+.wrapper {
+    padding: 5rem 1rem 1rem 1rem;
+
+
+    .password-reset-form {
+        width: 400px;    
+        min-height: calc(100vh - 122px);   
+        padding-left: 1rem;
+       
+    
+        .form-group {
+            width: 400px;
+            align-items: center;
+            border-radius: 5px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+    
+    
+            button {
+                padding: .6rem 2rem;
+            }
+    
+            .form-links {
+                width: 100%;
+                display: flex;
+                color: gray;
+                justify-content: space-between;
+    
+                small {
+                    cursor: pointer;
+                    transition: all ease;
+    
+                    &:hover {
+                        color: rgb(63, 63, 247);
+                    }
+                }
+            }
+           
+        }
+    
+    }   
+            
+    
+}

@@ -27,7 +27,19 @@ export class SignupFormComponent {
 
   onSubmit(){
     const user = this.signupForm.value
-    this.users.saveUser(JSON.stringify(user))    
+    let email = this.signupForm.value.email
+    let fullname = this.signupForm.value.password
+
+    let persons = this.users.getUsers('users') 
+    if(email && fullname){
+      if(persons?.includes(email)) {
+          alert('email already in use')          
+      } else {
+        this.users.saveUser(JSON.stringify(user))
+      }
+      
+    }
+    
   }
 
 }

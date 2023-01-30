@@ -31,6 +31,7 @@ export class LoginFormComponent {
 
     let email = this.loginForm.value.email
     let password = this.loginForm.value.password
+    // let name = this.loginForm.value.email
     
     if(myStore){
       let persons = JSON.parse(myStore).filter(function (el : any) {
@@ -39,7 +40,7 @@ export class LoginFormComponent {
 
       if(persons.length > 0){
         window.alert('login successful')
-        this.router.navigate(['/'])
+        this.router.navigate(['/profile'])
       } else {
         alert('no acc with such credentials')
       }
