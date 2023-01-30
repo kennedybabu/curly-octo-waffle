@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { UsersService } from 'src/app/users.service';
 import { FormBuilder } from '@angular/forms';
 import { User } from 'src/app/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-signup-form',
@@ -9,7 +10,7 @@ import { User } from 'src/app/user';
   styleUrls: ['./signup-form.component.scss']
 })
 export class SignupFormComponent {
-  constructor(private users: UsersService, private formBuilder: FormBuilder){
+  constructor(private users: UsersService, private formBuilder: FormBuilder, private route: Router){
     
   }
 
@@ -36,6 +37,9 @@ export class SignupFormComponent {
           alert('email already in use')          
       } else {
         this.users.saveUser(JSON.stringify(user))
+        alert('sign up successful')
+        this.route.navigate(['/profile'])
+        
       }
       
     }
